@@ -1,0 +1,111 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  background-color: #e8f0fe;
+  color: #0a2e61;
+}
+header {
+  background: #0a2e61;
+  color: #f0f4f8;
+  padding: 3rem 0;
+  text-align: center;
+}
+header h1 {
+  margin: 0;
+  font-size: 3rem;
+}
+header p {
+  margin: 0.5rem 0 0;
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+.container {
+  width: 90%;
+  max-width: 1000px;
+  margin: 2rem auto;
+}
+h2 {
+  text-align: center;
+  font-weight: 700;
+  font-size: 2.2rem;
+  margin-bottom: 1.5rem;
+}
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+.card {
+  background: white;
+  flex: 1 1 280px;
+  max-width: 300px;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+  text-align: center;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.6s ease-out;
+}
+.card.fade-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+.card img {
+  width: 80px;
+  margin-bottom: 1rem;
+}
+#about, #contact {
+  max-width: 600px;
+  margin: 3rem auto;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.6s ease-out;
+}
+#about.fade-in, #contact.fade-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+form label {
+  display: block;
+  margin-top: 1rem;
+  font-weight: 500;
+}
+form input, form textarea {
+  width: 100%;
+  padding: 0.5rem;
+  margin-top: 0.3rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+form input[type="submit"] {
+  margin-top: 1.5rem;
+  background-color: #0a2e61;
+  color: white;
+  border: none;
+  cursor: pointer;
+  padding: 0.8rem 1.5rem;
+  border-radius: 5px;
+  font-weight: 700;
+}
+form input[type="submit"]:hover {
+  background-color: #08407a;
+}
+footer {
+  background-color: #0a2e61;
+  color: white;
+  text-align: center;
+  padding: 1rem 0;
+  margin-top: 3rem;
+}
+@media (max-width: 768px) {
+  .cards {
+    flex-direction: column;
+    align-items: center;
+  }
+}

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Brainsoft - IT Services</title>
+<link rel="stylesheet" href="style.css" />
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+<header>
+  <div class="container">
+    <h1>Brainsoft</h1>
+    <p>Smart IT Solutions for a Digital World</p>
+  </div>
+</header>
+
+<section id="services" class="container">
+  <h2>Our Services</h2>
+  <div class="cards">
+    <div class="card">
+      <img src="it-support.png" alt="IT Support" />
+      <h3>IT Support</h3>
+      <p>Reliable technical support to keep your systems running smoothly.</p>
+    </div>
+    <div class="card">
+      <img src="web-development.png" alt="Web Development" />
+      <h3>Web Development</h3>
+      <p>Modern, responsive websites tailored to your needs.</p>
+    </div>
+    <div class="card">
+      <img src="cybersecurity.png" alt="Cybersecurity" />
+      <h3>Cybersecurity</h3>
+      <p>Protect your business with our advanced cybersecurity solutions.</p>
+    </div>
+  </div>
+</section>
+
+<section id="about" class="container">
+  <h2>About Us</h2>
+  <p>
+    At Brainsoft, we are passionate about delivering innovative technology solutions that empower businesses to thrive in the digital world.
+  </p>
+</section>
+
+<section id="contact" class="container">
+  <h2>Contact Us</h2>
+  <form action="mailto:contact@brainsoft.com" method="post" enctype="text/plain">
+    <label for="name">Name:</label><br />
+    <input type="text" id="name" name="name" required /><br />
+    <label for="email">Email:</label><br />
+    <input type="email" id="email" name="email" required /><br />
+    <label for="message">Message:</label><br />
+    <textarea id="message" name="message" rows="4" required></textarea><br />
+    <input type="submit" value="Send" />
+  </form>
+  <p>Email: brainsoft.81@gmail.com</p>
+  <p>Phone: 03219661111 (Pakistan)</p>
+</section>
+
+<footer>
+  <p>&copy; 2025 Brainsoft IT Services. All rights reserved.</p>
+</footer>
+
+<script>
+// Simple fade in on scroll animation
+const cards = document.querySelectorAll('.card');
+const about = document.querySelector('#about');
+const contact = document.querySelector('#contact');
+
+const options = {
+  threshold: 0.1
+};
+
+const observer = new IntersectionObserver(function(entries, observer){
+  entries.forEach(entry => {
+    if(entry.isIntersecting){
+      entry.target.classList.add('fade-in');
+      observer.unobserve(entry.target);
+    }
+  });
+}, options);
+
+cards.forEach(card => observer.observe(card));
+observer.observe(about);
+observer.observe(contact);
+</script>
+
+</body>
+</html>
