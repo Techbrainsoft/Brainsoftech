@@ -109,3 +109,25 @@ footer {
     align-items: center;
   }
 }
+/* CEO section styling */
+#ceo {
+  text-align: center;
+  margin: 50px 0;
+}
+
+.ceo-card {
+  display: inline-block;
+  padding: 20px;
+  border: 2px solid #0077cc;
+  border-radius: 10px;
+  background: #f9f9f9;
+}
+
+.ceo-photo {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid #0077cc;
+}
+
