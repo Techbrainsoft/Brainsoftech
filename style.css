@@ -130,4 +130,16 @@ footer {
   border-radius: 50%;
   border: 3px solid #0077cc;
 }
+.ceo-section {
+  text-align: center;
+  margin: 40px 0;
+}
+
+.ceo-section img {
+  max-width: 200px; /* adjust size as needed */
+  border-radius: 10px;
+  display: block;
+  margin: 0 auto; /* center image horizontally */
+}
+
 
