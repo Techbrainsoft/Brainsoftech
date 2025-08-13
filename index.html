@@ -6,6 +6,108 @@
 <title>Brainsoft - IT Services</title>
 <link rel="stylesheet" href="style.css" />
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
+<style>
+  /* Basic layout + theme */
+  :root {
+    --primary: #004080;
+    --primary-dark: #002a59;
+    --bg: #f4f7fa;
+    --card: #ffffff;
+    --text: #0a2e61;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    background: var(--bg);
+    color: var(--text);
+  }
+  header {
+    background: linear-gradient(90deg, var(--primary), var(--primary-dark));
+    color: #fff;
+    text-align: center;
+    padding: 40px 0;
+  }
+  header .container { width: 90%; max-width: 1100px; margin: 0 auto; }
+  header h1 { margin: 0; font-size: 2.6rem; }
+  header p { margin: 8px 0 0; opacity: 0.95; }
+
+  .container { width: 90%; max-width: 1100px; margin: 32px auto; }
+  h2 { text-align: center; margin: 0 0 16px; font-size: 2rem; }
+
+  /* Service cards */
+  .cards {
+    display: flex; flex-wrap: wrap; justify-content: center; gap: 22px;
+  }
+  .card {
+    background: var(--card);
+    border-radius: 14px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+    padding: 22px;
+    text-align: center;
+    width: 300px;
+    transition: transform .25s ease, box-shadow .25s ease;
+  }
+  .card:hover { transform: translateY(-4px); box-shadow: 0 12px 24px rgba(0,0,0,0.12); }
+  .card img { width: 80px; height: 80px; object-fit: contain; margin-bottom: 12px; }
+
+  /* Simple sections */
+  #about, #contact {
+    background: var(--card);
+    border-radius: 14px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+    padding: 22px;
+    max-width: 800px;
+  }
+
+  /* CEO card at the END */
+  #leadership { margin-top: 32px; }
+  .ceo-card {
+    background: var(--card);
+    border: 1px solid #e6ebf5;
+    border-radius: 16px;
+    box-shadow: 0 10px 24px rgba(0,0,0,0.08);
+    max-width: 360px;
+    margin: 10px auto 36px;
+    padding: 24px 22px;
+    text-align: center;
+  }
+  .ceo-card img {
+    width: 170px; height: 170px; object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid var(--primary);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.12);
+    display: block; margin: 0 auto 14px;
+  }
+  .ceo-card h3 {
+    margin: 6px 0 6px;
+    font-size: 1.35rem;
+    color: var(--text);
+  }
+  .ceo-card .role {
+    display: inline-block;
+    padding: 6px 12px;
+    border-radius: 999px;
+    background: #e6f0ff;
+    color: var(--primary);
+    font-weight: 700;
+    letter-spacing: 0.4px;
+  }
+
+  footer {
+    background: var(--primary-dark);
+    color: #fff;
+    text-align: center;
+    padding: 18px 0;
+    margin-top: 36px;
+  }
+
+  /* Small screens */
+  @media (max-width: 768px) {
+    header h1 { font-size: 2.2rem; }
+    .card { width: 100%; max-width: 340px; }
+  }
+</style>
 </head>
 
 <body>
@@ -44,16 +146,9 @@
   </p>
 </section>
 
-<!-- CEO Section -->
-<section id="ceo" class="container" style="text-align:center; margin-top:40px;">
-  <h2 style="font-size:28px; color:#004080;">CEO Imran Sher Ali</h2>
-  <p>Leading Brainsoft with vision, innovation, and dedication to excellence in IT services.</p>
-  <img src="ceo.jpg" alt="CEO Imran Sher Ali" style="width:200px;border-radius:50%;margin-top:20px;border:3px solid #004080;">
-</section>
-
 <section id="contact" class="container">
   <h2>Contact Us</h2>
-  <form action="mailto:contact@brainsoft.com" method="post" enctype="text/plain">
+  <form action="mailto:brainsoft.81@gmail.com" method="post" enctype="text/plain">
     <label for="name">Name:</label><br />
     <input type="text" id="name" name="name" required /><br />
     <label for="email">Email:</label><br />
@@ -66,35 +161,20 @@
   <p>Phone: 0321-9661111 (Pakistan)</p>
 </section>
 
+<!-- CEO section at the END -->
+<section id="leadership" class="container">
+  <h2>Leadership</h2>
+  <div class="ceo-card">
+    <!-- Upload ceo.jpg to the SAME folder as index.html -->
+    <img src="ceo.jpg" alt="Imran Sher Ali" />
+    <h3>Imran Sher Ali</h3>
+    <div class="role">CEO</div>
+  </div>
+</section>
+
 <footer>
   <p>&copy; 2025 Brainsoft IT Services. All rights reserved.</p>
 </footer>
-
-<script>
-// Simple fade in on scroll animation
-const cards = document.querySelectorAll('.card');
-const about = document.querySelector('#about');
-const contact = document.querySelector('#contact');
-const ceo = document.querySelector('#ceo');
-
-const options = {
-  threshold: 0.1
-};
-
-const observer = new IntersectionObserver(function(entries, observer){
-  entries.forEach(entry => {
-    if(entry.isIntersecting){
-      entry.target.classList.add('fade-in');
-      observer.unobserve(entry.target);
-    }
-  });
-}, options);
-
-cards.forEach(card => observer.observe(card));
-observer.observe(about);
-observer.observe(contact);
-observer.observe(ceo);
-</script>
-
 </body>
 </html>
+
