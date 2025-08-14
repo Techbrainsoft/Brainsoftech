@@ -136,10 +136,11 @@ footer {
 }
 
 .ceo-section img {
-  max-width: 200px; /* adjust size as needed */
+  max-width: 150px; /* adjust size as needed */
   border-radius: 10px;
   display: block;
   margin: 0 auto; /* center image horizontally */
 }
+
 
 
