@@ -1,4 +1,4 @@
-/* General Body Styles */
+/* ------------------ General Body Styles ------------------ */
 body {
   font-family: 'Roboto', sans-serif;
   margin: 0;
@@ -6,7 +6,7 @@ body {
   color: #333;
 }
 
-/* Header */
+/* ------------------ Header ------------------ */
 header {
   background-color: #003366;
   color: white;
@@ -20,14 +20,14 @@ header {
   margin: auto;
 }
 
-/* Section Headings */
+/* ------------------ Section Headings ------------------ */
 h2 {
   color: #003366;
   margin-top: 40px;
   text-align: center;
 }
 
-/* Services Cards */
+/* ------------------ Services Cards ------------------ */
 .cards {
   display: flex;
   flex-wrap: wrap;
@@ -49,7 +49,7 @@ h2 {
 }
 
 .card svg {
-  margin-bottom: 20px;
+  margin-bottom: 20px; /* spacing below icon */
 }
 
 .card:hover {
@@ -61,17 +61,27 @@ h2 {
   opacity: 1;
 }
 
-/* About Section */
-#about, #contact, .ceo-section {
-  text-align: center;
+/* ------------------ About Section ------------------ */
+#about {
+  text-align: center; /* centers all content inside About */
 }
 
-#about p, #contact p {
+#about p {
+  text-align: center; /* centers paragraph text */
   margin: 20px 0;
   line-height: 1.6;
 }
 
-/* Contact Form */
+/* ------------------ Contact Section ------------------ */
+#contact {
+  text-align: center;
+}
+
+#contact p {
+  margin: 20px 0;
+  line-height: 1.6;
+}
+
 form {
   margin-top: 20px;
 }
@@ -103,7 +113,7 @@ input[type="submit"]:hover {
   background-color: #0055aa;
 }
 
-/* CEO Section */
+/* ------------------ CEO Section ------------------ */
 .ceo-section {
   text-align: center;
   margin-top: 50px;
@@ -128,7 +138,7 @@ input[type="submit"]:hover {
   color: #003366;
 }
 
-/* Footer */
+/* ------------------ Footer ------------------ */
 footer {
   text-align: center;
   background: #003366;
@@ -137,7 +147,7 @@ footer {
   margin-top: 40px;
 }
 
-/* Responsive Adjustments */
+/* ------------------ Responsive Adjustments ------------------ */
 @media (max-width: 768px) {
   .cards {
     flex-direction: column;
