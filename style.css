@@ -124,11 +124,11 @@ footer {
 }
 
 .ceo-photo {
-  width: 200px;
-  height: 200px;
+  width: 150px;
+  height: 150px;
   object-fit: cover;
   border-radius: 50%;
-  border: 3px solid #0077cc;
+  border: 4px solid #0077cc;
 }
 .ceo-section {
   text-align: center;
@@ -141,6 +141,7 @@ footer {
   display: block;
   margin: 0 auto; /* center image horizontally */
 }
+
 
 
 
