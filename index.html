@@ -4,7 +4,6 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Brainsoft - IT Services</title>
-<link rel="stylesheet" href="style.css" />
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
 <style>
   body {
@@ -13,47 +12,64 @@
     background-color: #f4f6f8;
     color: #333;
   }
+
   header {
     background-color: #003366;
     color: white;
     text-align: center;
     padding: 40px 0;
   }
+
   .container {
     width: 90%;
     max-width: 1100px;
     margin: auto;
   }
+
   h2 {
     color: #003366;
     margin-top: 40px;
+    text-align: center;
   }
+
+  /* Services Cards */
   .cards {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
+    justify-content: center;
+    margin-top: 20px;
   }
+
   .card {
     background: white;
-    padding: 20px;
-    flex: 1 1 calc(33.333% - 20px);
+    padding: 30px 20px;
+    flex: 1 1 280px;
+    max-width: 300px;
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
     border-radius: 8px;
     text-align: center;
     opacity: 0;
-    transition: opacity 1s ease;
+    transition: opacity 1s ease, transform 0.3s ease;
   }
-  .card img {
-    width: 80px;
-    height: auto;
-    margin-bottom: 15px;
+
+  .card svg {
+    margin-bottom: 20px;
   }
+
+  .card:hover {
+    transform: translateY(-5px);
+  }
+
   .fade-in {
     opacity: 1;
   }
+
+  /* About & Contact */
   form {
     margin-top: 20px;
   }
+
   input, textarea {
     width: 100%;
     padding: 8px;
@@ -61,15 +77,18 @@
     border: 1px solid #ccc;
     border-radius: 4px;
   }
+
   input[type="submit"] {
     background-color: #003366;
     color: white;
     border: none;
     cursor: pointer;
   }
+
   input[type="submit"]:hover {
     background-color: #0055aa;
   }
+
   footer {
     text-align: center;
     background: #003366;
@@ -77,15 +96,17 @@
     padding: 20px 0;
     margin-top: 40px;
   }
+
   /* CEO Section */
   .ceo-section {
     text-align: center;
-    margin-top: 30px;
+    margin-top: 50px;
     padding: 30px;
     background: white;
     box-shadow: 0 4px 12px rgba(0,0,0,0.1);
     border-radius: 10px;
   }
+
   .ceo-section img {
     width: 150px;
     height: 150px;
@@ -93,6 +114,7 @@
     object-fit: cover;
     border: 4px solid #003366;
   }
+
   .ceo-name {
     font-size: 1.4em;
     font-weight: bold;
@@ -110,6 +132,7 @@
   </div>
 </header>
 
+<!-- Services Section -->
 <section id="services" class="container">
   <h2>Our Services</h2>
   <div class="cards">
@@ -137,10 +160,12 @@
         <path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm1 11h-2V9h2v3z"/>
       </svg>
       <h3>Cybersecurity</h3>
-      <p>Protect your bu
+      <p>Protect your business with our advanced cybersecurity solutions.</p>
+    </div>
+  </div>
+</section>
 
-
-
+<!-- About Section -->
 <section id="about" class="container">
   <h2>About Us</h2>
   <p>
@@ -148,6 +173,7 @@
   </p>
 </section>
 
+<!-- Contact Section -->
 <section id="contact" class="container">
   <h2>Contact Us</h2>
   <form action="mailto:contact@brainsoft.com" method="post" enctype="text/plain">
@@ -162,11 +188,11 @@
   <p>Email: brainsoft.81@gmail.com</p>
   <p>Phone: 0321-9661111 (Pakistan)</p>
 
-  <!-- CEO Section -->
-  <div class="ceo-section">
+  <!-- CEO Section inside Contact -->
+  <section class="ceo-section">
     <img src="ceo.jpg" alt="CEO Imran Sher Ali">
     <div class="ceo-name">CEO Imran Sher Ali</div>
-  </div>
+  </section>
 </section>
 
 <footer>
@@ -193,5 +219,3 @@ observer.observe(contact);
 
 </body>
 </html>
-
-
