@@ -124,8 +124,8 @@ footer {
 }
 
 .ceo-photo {
-  width: 150px;
-  height: 150px;
+  width: 100px;
+  height: 100px;
   object-fit: cover;
   border-radius: 50%;
   border: 4px solid #0077cc;
@@ -136,11 +136,12 @@ footer {
 }
 
 .ceo-section img {
-  max-width: 150px; /* adjust size as needed */
+  max-width: 100px; /* adjust size as needed */
   border-radius: 10px;
   display: block;
   margin: 0 auto; /* center image horizontally */
 }
+
 
 
 
