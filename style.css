@@ -36,21 +36,30 @@ h2 {
 .cards {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
-  gap: 2rem;
+  gap: 20px;
+  justify-content: center; /* centers cards horizontally */
 }
+
 .card {
   background: white;
-  flex: 1 1 280px;
+  padding: 30px 20px;
+  flex: 1 1 280px; /* responsive width */
   max-width: 300px;
-  padding: 1.5rem;
-  border-radius: 10px;
-  box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  border-radius: 8px;
   text-align: center;
   opacity: 0;
-  transform: translateY(30px);
-  transition: all 0.6s ease-out;
+  transition: opacity 1s ease, transform 0.3s ease;
 }
+
+.card svg {
+  margin-bottom: 20px; /* spacing below icon */
+}
+
+.card:hover {
+  transform: translateY(-5px); /* subtle hover effect */
+}
+
 .card.fade-in {
   opacity: 1;
   transform: translateY(0);
@@ -141,6 +150,7 @@ footer {
   display: block;
   margin: 0 auto; /* center image horizontally */
 }
+
 
 
 
